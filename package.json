@@ -1,0 +1,12 @@
+{
+  "name": "chatroom",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "mime": "^2.4.3",
+    "socket.io": "^2.2.0"
+  }
+}
