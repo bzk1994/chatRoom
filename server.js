@@ -21,19 +21,12 @@ function serverStatic(res,cache,absPath){
 	if(cache[absPath]){	 //如果内存中有，直接返回
 		sendFile(res, absPath, cache[absPath])
 	}else{
-		fs.exists(absPath, function(exists){	//没有的话到文件系统读取
-			if(exists){
-				fs.readFile(absPath, (err, data)=>{
-					if(err){
-						send404(res)
-					}else{
-						cache[absPath] = data;
-						sendFile(res, absPath, data)
-					}
-				})
-			}else{
-				console.log(absPath)
+		fs.readFile(absPath, (err, data)=>{
+			if(err){
 				send404(res)
+			}else{
+				cache[absPath] = data;
+				sendFile(res, absPath, data)
 			}
 		})
 	}
