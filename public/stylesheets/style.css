@@ -25,3 +25,44 @@ a {
     margin-bottom: 1em;
     margin-right: 10px;
 }
+
+#room-list{
+    float: right;
+    width: 100px;
+    height: 300px;
+    overflow: auto;
+}
+
+#room-list div{
+    border-bottom: 1px solid #eee;
+}
+
+#room-list div:hover{
+    background-color: #dddddd;
+}
+
+#send-message{
+    width: 700px;
+    margin: 0 1em 1em 0;
+}
+
+#help{
+    font-size: 10px;
+}
+
+.attention{
+    margin: 10px auto;
+    padding: 0 10px;
+    max-width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
